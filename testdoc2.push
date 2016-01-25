@@ -1,1 +1,11 @@
-This is a second test to push to dev. First git add . Then git commit -m "Test Commit 2" Finally Git push origin dev.
+This is a second test to push to dev.
+Instructions to put changes on github:
+
+1:  To update everything
+    git add . 
+
+2:  To commit the changes 
+    git commit -m "name of commit (brief description)" 
+
+3:  To push to the github website
+    git push origin dev
