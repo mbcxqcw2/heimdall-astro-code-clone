@@ -41,8 +41,36 @@ PATH: /usr/java/latest/bin
 PATH: /opt/maven/bin
 PATH: /opt/pdsh/bin
 PATH: /opt/rocks/bin
-PATH: /opt/rocks/sbin
-PATH: /home/mm2/bin
+PATH: /opt/rocks/sbin/share/apps/pulsar/heimdall-astro-code/bin
+PATH: /share/apps/pulsar/plotfil
+PATH: /share/apps/pulsar/psrdada/bin
+PATH: /share/apps/pulsar/psrsoft/usr/bin
+PATH: /share/apps/pulsar/gsl/gsl-2.1/bin
+PATH: /share/apps/pulsar/psrsoft/usr/share/pgplot
+PATH: /share/apps/pulsar/presto/bin
+PATH: /share/apps/pulsar/gnuplot/bin
+PATH: /share/apps/pulsar/heimdall-astro-code/Applications
+PATH: /share/apps/pulsar/fakedada/fakedada/share/apps/pulsar/heimdall-astro-code/bin
+PATH: /share/apps/pulsar/plotfil
+PATH: /share/apps/pulsar/psrdada/bin
+PATH: /share/apps/pulsar/psrsoft/usr/bin
+PATH: /share/apps/pulsar/gsl/gsl-2.1/bin
+PATH: /share/apps/pulsar/psrsoft/usr/share/pgplot
+PATH: /share/apps/pulsar/presto/bin
+PATH: /share/apps/pulsar/gnuplot/bin
+PATH: /share/apps/pulsar/heimdall-astro-code/Applications
+PATH: /share/apps/pulsar/fakedada/fakedada
+PATH: /home/cwalker/bin/share/apps/pulsar/heimdall-astro-code/bin
+PATH: /share/apps/pulsar/plotfil
+PATH: /share/apps/pulsar/psrdada/bin
+PATH: /share/apps/pulsar/psrsoft/usr/bin
+PATH: /share/apps/pulsar/gsl/gsl-2.1/bin
+PATH: /share/apps/pulsar/psrsoft/usr/share/pgplot
+PATH: /share/apps/pulsar/presto/bin
+PATH: /share/apps/pulsar/gnuplot/bin
+PATH: /share/apps/pulsar/heimdall-astro-code/Applications
+PATH: /share/apps/pulsar/fakedada/fakedada
+PATH: /share/apps/pulsar/heimdall-astro-code/Scripts
 
 
 ## ----------- ##
@@ -451,78 +479,48 @@ configure:15677: checking for DEDISP Library installation
 configure:15727: gcc -c -I/share/apps/pulsar/dedisp-read-only/include -g -O2   conftest.c >&5
 configure:15734: $? = 0
 configure:15820: gcc -o conftest -I/share/apps/pulsar/dedisp-read-only/include -g -O2    conftest.c -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp   >&5
-/usr/bin/ld: warning: libcudart.so.7.5, needed by /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so, not found (try using -rpath or -rpath-link)
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `sqrt'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_free_exception'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::what() const'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_begin_catch'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::runtime_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaFree'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_M_destroy(std::allocator<char> const&)'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::logic_error'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::what() const'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator new(unsigned long)'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cudaRegisterVar'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::bad_alloc'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaEventDestroy'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cudaRegisterFunction'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaGetLastError'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::~runtime_error()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaMemcpyToSymbolAsync'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned long)'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaStreamWaitEvent'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_length_error(char const*)'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_release'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator delete(void*)'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaGetDevice'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::what() const'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_call_unexpected'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_pure_virtual'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaSetupArgument'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaThreadSynchronize'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaConfigureCall'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_allocate_exception'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cudaUnregisterFatBinary'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaGetErrorString'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaMemcpy2D'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaLaunch'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__gxx_personality_v0'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_S_empty_rep_storage'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaStreamSynchronize'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for std::bad_alloc'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_throw'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_abort'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_bad_alloc()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaGetDeviceProperties'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::~Init()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaSetDevice'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cudaRegisterFatBinary'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_end_catch'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_acquire'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cudaRegisterTexture'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaEventCreateWithFlags'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__class_type_info'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::Init()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaCreateChannelDesc'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::runtime_error'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaBindTexture'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaStreamDestroy'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaFuncGetAttributes'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaMalloc'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_rethrow'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaEventRecord'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::~logic_error()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaDeviceGetAttribute'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::terminate()'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaMemcpyAsync'
 collect2: ld returned 1 exit status
 configure:15827: $? = 1
 configure: failed program was:
@@ -556,78 +554,723 @@ configure: failed program was:
 |   return 0;
 | }
 configure:15820: gcc -o conftest -I/share/apps/pulsar/dedisp-read-only/include -g -O2    conftest.c -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp   >&5
-/usr/bin/ld: warning: libcudart.so.7.5, needed by /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so, not found (try using -rpath or -rpath-link)
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `sqrt'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_free_exception'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::what() const'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_begin_catch'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::runtime_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaFree'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_M_destroy(std::allocator<char> const&)'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::logic_error'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::what() const'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator new(unsigned long)'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cudaRegisterVar'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::bad_alloc'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaEventDestroy'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cudaRegisterFunction'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaGetLastError'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::~runtime_error()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaMemcpyToSymbolAsync'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned long)'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaStreamWaitEvent'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_length_error(char const*)'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_release'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator delete(void*)'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaGetDevice'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::what() const'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_call_unexpected'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_pure_virtual'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaSetupArgument'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaThreadSynchronize'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaConfigureCall'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_allocate_exception'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cudaUnregisterFatBinary'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaGetErrorString'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaMemcpy2D'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaLaunch'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__gxx_personality_v0'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_S_empty_rep_storage'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaStreamSynchronize'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for std::bad_alloc'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_throw'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_abort'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_bad_alloc()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaGetDeviceProperties'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::~Init()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaSetDevice'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cudaRegisterFatBinary'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_end_catch'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_acquire'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cudaRegisterTexture'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaEventCreateWithFlags'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__class_type_info'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::Init()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaCreateChannelDesc'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::runtime_error'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaBindTexture'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaStreamDestroy'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaFuncGetAttributes'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaMalloc'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_rethrow'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaEventRecord'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::~logic_error()'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaDeviceGetAttribute'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::terminate()'
 /share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)'
-/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `cudaMemcpyAsync'
+collect2: ld returned 1 exit status
+configure:15827: $? = 1
+configure: failed program was:
+| /* confdefs.h.  */
+| #define PACKAGE_NAME "HEIMDALL"
+| #define PACKAGE_TARNAME "heimdall"
+| #define PACKAGE_VERSION "0.1"
+| #define PACKAGE_STRING "HEIMDALL 0.1"
+| #define PACKAGE_BUGREPORT "ajameson@swin.edu.au"
+| #define PACKAGE "heimdall"
+| #define VERSION "0.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <dedisp.h>
+| int
+| main ()
+| {
+| dedisp_get_error_string (DEDISP_NO_ERROR);
+|   ;
+|   return 0;
+| }
+configure:15820: gcc -o conftest -I/share/apps/pulsar/dedisp-read-only/include -g -O2    conftest.c -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp   >&5
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `sqrt'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_free_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_begin_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::runtime_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_M_destroy(std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::logic_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator new(unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::~runtime_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_length_error(char const*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_release'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator delete(void*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_call_unexpected'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_pure_virtual'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_allocate_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__gxx_personality_v0'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_S_empty_rep_storage'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_throw'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_abort'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::~Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_end_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_acquire'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::runtime_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_rethrow'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::~logic_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::terminate()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)'
+collect2: ld returned 1 exit status
+configure:15827: $? = 1
+configure: failed program was:
+| /* confdefs.h.  */
+| #define PACKAGE_NAME "HEIMDALL"
+| #define PACKAGE_TARNAME "heimdall"
+| #define PACKAGE_VERSION "0.1"
+| #define PACKAGE_STRING "HEIMDALL 0.1"
+| #define PACKAGE_BUGREPORT "ajameson@swin.edu.au"
+| #define PACKAGE "heimdall"
+| #define VERSION "0.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <dedisp.h>
+| int
+| main ()
+| {
+| dedisp_get_error_string (DEDISP_NO_ERROR);
+|   ;
+|   return 0;
+| }
+configure:15820: gcc -o conftest -I/share/apps/pulsar/dedisp-read-only/include -g -O2    conftest.c -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp   >&5
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `sqrt'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_free_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_begin_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::runtime_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_M_destroy(std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::logic_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator new(unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::~runtime_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_length_error(char const*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_release'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator delete(void*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_call_unexpected'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_pure_virtual'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_allocate_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__gxx_personality_v0'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_S_empty_rep_storage'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_throw'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_abort'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::~Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_end_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_acquire'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::runtime_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_rethrow'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::~logic_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::terminate()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)'
+collect2: ld returned 1 exit status
+configure:15827: $? = 1
+configure: failed program was:
+| /* confdefs.h.  */
+| #define PACKAGE_NAME "HEIMDALL"
+| #define PACKAGE_TARNAME "heimdall"
+| #define PACKAGE_VERSION "0.1"
+| #define PACKAGE_STRING "HEIMDALL 0.1"
+| #define PACKAGE_BUGREPORT "ajameson@swin.edu.au"
+| #define PACKAGE "heimdall"
+| #define VERSION "0.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <dedisp.h>
+| int
+| main ()
+| {
+| dedisp_get_error_string (DEDISP_NO_ERROR);
+|   ;
+|   return 0;
+| }
+configure:15820: gcc -o conftest -I/share/apps/pulsar/dedisp-read-only/include -g -O2    conftest.c -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp   >&5
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `sqrt'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_free_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_begin_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::runtime_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_M_destroy(std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::logic_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator new(unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::~runtime_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_length_error(char const*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_release'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator delete(void*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_call_unexpected'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_pure_virtual'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_allocate_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__gxx_personality_v0'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_S_empty_rep_storage'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_throw'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_abort'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::~Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_end_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_acquire'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::runtime_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_rethrow'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::~logic_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::terminate()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)'
+collect2: ld returned 1 exit status
+configure:15827: $? = 1
+configure: failed program was:
+| /* confdefs.h.  */
+| #define PACKAGE_NAME "HEIMDALL"
+| #define PACKAGE_TARNAME "heimdall"
+| #define PACKAGE_VERSION "0.1"
+| #define PACKAGE_STRING "HEIMDALL 0.1"
+| #define PACKAGE_BUGREPORT "ajameson@swin.edu.au"
+| #define PACKAGE "heimdall"
+| #define VERSION "0.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <dedisp.h>
+| int
+| main ()
+| {
+| dedisp_get_error_string (DEDISP_NO_ERROR);
+|   ;
+|   return 0;
+| }
+configure:15820: gcc -o conftest -I/share/apps/pulsar/dedisp-read-only/include -g -O2    conftest.c -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp   >&5
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `sqrt'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_free_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_begin_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::runtime_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_M_destroy(std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::logic_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator new(unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::~runtime_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_length_error(char const*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_release'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator delete(void*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_call_unexpected'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_pure_virtual'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_allocate_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__gxx_personality_v0'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_S_empty_rep_storage'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_throw'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_abort'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::~Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_end_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_acquire'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::runtime_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_rethrow'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::~logic_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::terminate()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)'
+collect2: ld returned 1 exit status
+configure:15827: $? = 1
+configure: failed program was:
+| /* confdefs.h.  */
+| #define PACKAGE_NAME "HEIMDALL"
+| #define PACKAGE_TARNAME "heimdall"
+| #define PACKAGE_VERSION "0.1"
+| #define PACKAGE_STRING "HEIMDALL 0.1"
+| #define PACKAGE_BUGREPORT "ajameson@swin.edu.au"
+| #define PACKAGE "heimdall"
+| #define VERSION "0.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <dedisp.h>
+| int
+| main ()
+| {
+| dedisp_get_error_string (DEDISP_NO_ERROR);
+|   ;
+|   return 0;
+| }
+configure:15820: gcc -o conftest -I/share/apps/pulsar/dedisp-read-only/include -g -O2    conftest.c -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp   >&5
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `sqrt'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_free_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_begin_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::runtime_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_M_destroy(std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::logic_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator new(unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::~runtime_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_length_error(char const*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_release'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator delete(void*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_call_unexpected'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_pure_virtual'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_allocate_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__gxx_personality_v0'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_S_empty_rep_storage'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_throw'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_abort'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::~Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_end_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_acquire'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::runtime_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_rethrow'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::~logic_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::terminate()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)'
+collect2: ld returned 1 exit status
+configure:15827: $? = 1
+configure: failed program was:
+| /* confdefs.h.  */
+| #define PACKAGE_NAME "HEIMDALL"
+| #define PACKAGE_TARNAME "heimdall"
+| #define PACKAGE_VERSION "0.1"
+| #define PACKAGE_STRING "HEIMDALL 0.1"
+| #define PACKAGE_BUGREPORT "ajameson@swin.edu.au"
+| #define PACKAGE "heimdall"
+| #define VERSION "0.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <dedisp.h>
+| int
+| main ()
+| {
+| dedisp_get_error_string (DEDISP_NO_ERROR);
+|   ;
+|   return 0;
+| }
+configure:15820: gcc -o conftest -I/share/apps/pulsar/dedisp-read-only/include -g -O2    conftest.c -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp   >&5
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `sqrt'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_free_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_begin_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::runtime_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_M_destroy(std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::logic_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator new(unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::~runtime_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_length_error(char const*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_release'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator delete(void*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_call_unexpected'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_pure_virtual'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_allocate_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__gxx_personality_v0'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_S_empty_rep_storage'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_throw'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_abort'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::~Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_end_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_acquire'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::runtime_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_rethrow'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::~logic_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::terminate()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)'
+collect2: ld returned 1 exit status
+configure:15827: $? = 1
+configure: failed program was:
+| /* confdefs.h.  */
+| #define PACKAGE_NAME "HEIMDALL"
+| #define PACKAGE_TARNAME "heimdall"
+| #define PACKAGE_VERSION "0.1"
+| #define PACKAGE_STRING "HEIMDALL 0.1"
+| #define PACKAGE_BUGREPORT "ajameson@swin.edu.au"
+| #define PACKAGE "heimdall"
+| #define VERSION "0.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <dedisp.h>
+| int
+| main ()
+| {
+| dedisp_get_error_string (DEDISP_NO_ERROR);
+|   ;
+|   return 0;
+| }
+configure:15820: gcc -o conftest -I/share/apps/pulsar/dedisp-read-only/include -g -O2    conftest.c -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp   >&5
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `sqrt'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_free_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_begin_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::runtime_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_M_destroy(std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::logic_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator new(unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::~runtime_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_length_error(char const*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_release'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator delete(void*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_call_unexpected'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_pure_virtual'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_allocate_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__gxx_personality_v0'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_S_empty_rep_storage'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_throw'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_abort'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::~Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_end_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_acquire'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::runtime_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_rethrow'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::~logic_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::terminate()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)'
+collect2: ld returned 1 exit status
+configure:15827: $? = 1
+configure: failed program was:
+| /* confdefs.h.  */
+| #define PACKAGE_NAME "HEIMDALL"
+| #define PACKAGE_TARNAME "heimdall"
+| #define PACKAGE_VERSION "0.1"
+| #define PACKAGE_STRING "HEIMDALL 0.1"
+| #define PACKAGE_BUGREPORT "ajameson@swin.edu.au"
+| #define PACKAGE "heimdall"
+| #define VERSION "0.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <dedisp.h>
+| int
+| main ()
+| {
+| dedisp_get_error_string (DEDISP_NO_ERROR);
+|   ;
+|   return 0;
+| }
+configure:15820: gcc -o conftest -I/share/apps/pulsar/dedisp-read-only/include -g -O2    conftest.c -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp   >&5
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `sqrt'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_free_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_begin_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::runtime_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_M_destroy(std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::logic_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator new(unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::~runtime_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_length_error(char const*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_release'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator delete(void*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_call_unexpected'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_pure_virtual'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_allocate_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__gxx_personality_v0'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_S_empty_rep_storage'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_throw'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_abort'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::~Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_end_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_acquire'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::runtime_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_rethrow'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::~logic_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::terminate()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)'
+collect2: ld returned 1 exit status
+configure:15827: $? = 1
+configure: failed program was:
+| /* confdefs.h.  */
+| #define PACKAGE_NAME "HEIMDALL"
+| #define PACKAGE_TARNAME "heimdall"
+| #define PACKAGE_VERSION "0.1"
+| #define PACKAGE_STRING "HEIMDALL 0.1"
+| #define PACKAGE_BUGREPORT "ajameson@swin.edu.au"
+| #define PACKAGE "heimdall"
+| #define VERSION "0.1"
+| #define STDC_HEADERS 1
+| #define HAVE_SYS_TYPES_H 1
+| #define HAVE_SYS_STAT_H 1
+| #define HAVE_STDLIB_H 1
+| #define HAVE_STRING_H 1
+| #define HAVE_MEMORY_H 1
+| #define HAVE_STRINGS_H 1
+| #define HAVE_INTTYPES_H 1
+| #define HAVE_STDINT_H 1
+| #define HAVE_UNISTD_H 1
+| #define HAVE_DLFCN_H 1
+| #define LT_OBJDIR ".libs/"
+| /* end confdefs.h.  */
+| #include <dedisp.h>
+| int
+| main ()
+| {
+| dedisp_get_error_string (DEDISP_NO_ERROR);
+|   ;
+|   return 0;
+| }
+configure:15820: gcc -o conftest -I/share/apps/pulsar/dedisp-read-only/include -g -O2    conftest.c -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp   >&5
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `sqrt'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_free_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_begin_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::runtime_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_M_destroy(std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::logic_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator new(unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::~runtime_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::assign(char const*, unsigned long)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_length_error(char const*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_release'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `operator delete(void*)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::runtime_error::what() const'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_call_unexpected'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_pure_virtual'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_allocate_exception'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__gxx_personality_v0'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::_Rep::_S_empty_rep_storage'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for std::bad_alloc'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_throw'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_abort'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::__throw_bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::~Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_end_catch'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_guard_acquire'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::ios_base::Init::Init()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `typeinfo for std::runtime_error'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `__cxa_rethrow'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::bad_alloc::~bad_alloc()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::logic_error::~logic_error()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::terminate()'
+/share/apps/pulsar/dedisp-read-only/lib/libdedisp.so: undefined reference to `std::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long)'
 collect2: ld returned 1 exit status
 configure:15827: $? = 1
 configure: failed program was:
@@ -732,41 +1375,9 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:16161: gcc -o conftest -I/usr/local/cuda/include -g -O2    conftest.c -L. -lcudart   >&5
-/usr/bin/ld: cannot find -lcudart
-collect2: ld returned 1 exit status
-configure:16168: $? = 1
-configure: failed program was:
-| /* confdefs.h.  */
-| #define PACKAGE_NAME "HEIMDALL"
-| #define PACKAGE_TARNAME "heimdall"
-| #define PACKAGE_VERSION "0.1"
-| #define PACKAGE_STRING "HEIMDALL 0.1"
-| #define PACKAGE_BUGREPORT "ajameson@swin.edu.au"
-| #define PACKAGE "heimdall"
-| #define VERSION "0.1"
-| #define STDC_HEADERS 1
-| #define HAVE_SYS_TYPES_H 1
-| #define HAVE_SYS_STAT_H 1
-| #define HAVE_STDLIB_H 1
-| #define HAVE_STRING_H 1
-| #define HAVE_MEMORY_H 1
-| #define HAVE_STRINGS_H 1
-| #define HAVE_INTTYPES_H 1
-| #define HAVE_STDINT_H 1
-| #define HAVE_UNISTD_H 1
-| #define HAVE_DLFCN_H 1
-| #define LT_OBJDIR ".libs/"
-| /* end confdefs.h.  */
-| #include <cuda_runtime.h>
-| int
-| main ()
-| {
-| cudaMalloc (0, 0);
-|   ;
-|   return 0;
-| }
-configure:16206: result: no
+configure:16161: gcc -o conftest -I/usr/local/cuda/include -g -O2    conftest.c -L/usr/local/cuda-7.5/targets/x86_64-linux/lib -lcudart   >&5
+configure:16168: $? = 0
+configure:16206: result: yes
 configure:16309: checking for PSRDADA Library installation
 configure:16363: gcc -c -I/share/apps/pulsar/psrdada/include -g -O2   conftest.c >&5
 configure:16370: $? = 0
@@ -856,7 +1467,7 @@ configure:17224: gcc -c -g -O2   conftest.c >&5
 configure:17231: $? = 0
 configure:17258: gcc -c -g -O2   conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:71: error: expected expression before ')' token
+conftest.c:72: error: expected expression before ')' token
 configure:17265: $? = 1
 configure: failed program was:
 | /* confdefs.h.  */
@@ -879,6 +1490,7 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_DLFCN_H 1
 | #define LT_OBJDIR ".libs/"
+| #define HAVE_CUDA 1
 | #define HAVE_PSRDADA 1
 | #define HAVE_THRUST 1
 | #define STDC_HEADERS 1
@@ -944,8 +1556,8 @@ configure:17409: gcc -c -g -O2   conftest.c >&5
 configure:17416: $? = 0
 configure:17445: gcc -c -g -O2   conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:74: warning: integer overflow in expression
-conftest.c:74: error: size of array 'test_array' is negative
+conftest.c:75: warning: integer overflow in expression
+conftest.c:75: error: size of array 'test_array' is negative
 configure:17452: $? = 1
 configure: failed program was:
 | /* confdefs.h.  */
@@ -968,6 +1580,7 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_DLFCN_H 1
 | #define LT_OBJDIR ".libs/"
+| #define HAVE_CUDA 1
 | #define HAVE_PSRDADA 1
 | #define HAVE_THRUST 1
 | #define STDC_HEADERS 1
@@ -1033,7 +1646,7 @@ configure:17521: gcc -c -g -O2   conftest.c >&5
 configure:17528: $? = 0
 configure:17555: gcc -c -g -O2   conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:73: error: expected expression before ')' token
+conftest.c:74: error: expected expression before ')' token
 configure:17562: $? = 1
 configure: failed program was:
 | /* confdefs.h.  */
@@ -1056,6 +1669,7 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_DLFCN_H 1
 | #define LT_OBJDIR ".libs/"
+| #define HAVE_CUDA 1
 | #define HAVE_PSRDADA 1
 | #define HAVE_THRUST 1
 | #define STDC_HEADERS 1
@@ -1127,7 +1741,7 @@ configure:17809: gcc -c -g -O2   conftest.c >&5
 configure:17816: $? = 0
 configure:17843: gcc -c -g -O2   conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:73: error: expected expression before ')' token
+conftest.c:74: error: expected expression before ')' token
 configure:17850: $? = 1
 configure: failed program was:
 | /* confdefs.h.  */
@@ -1150,6 +1764,7 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_DLFCN_H 1
 | #define LT_OBJDIR ".libs/"
+| #define HAVE_CUDA 1
 | #define HAVE_PSRDADA 1
 | #define HAVE_THRUST 1
 | #define STDC_HEADERS 1
@@ -1220,7 +1835,7 @@ configure:18088: $? = 0
 configure:18103: result: time.h
 configure:18131: checking vfork.h usability
 configure:18148: gcc -c -g -O2   conftest.c >&5
-conftest.c:71:19: error: vfork.h: No such file or directory
+conftest.c:72:19: error: vfork.h: No such file or directory
 configure:18155: $? = 1
 configure: failed program was:
 | /* confdefs.h.  */
@@ -1243,6 +1858,7 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_DLFCN_H 1
 | #define LT_OBJDIR ".libs/"
+| #define HAVE_CUDA 1
 | #define HAVE_PSRDADA 1
 | #define HAVE_THRUST 1
 | #define STDC_HEADERS 1
@@ -1297,7 +1913,7 @@ configure: failed program was:
 configure:18169: result: no
 configure:18173: checking vfork.h presence
 configure:18188: gcc -E  conftest.c
-conftest.c:38:19: error: vfork.h: No such file or directory
+conftest.c:39:19: error: vfork.h: No such file or directory
 configure:18195: $? = 1
 configure: failed program was:
 | /* confdefs.h.  */
@@ -1320,6 +1936,7 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_DLFCN_H 1
 | #define LT_OBJDIR ".libs/"
+| #define HAVE_CUDA 1
 | #define HAVE_PSRDADA 1
 | #define HAVE_THRUST 1
 | #define STDC_HEADERS 1
@@ -1343,7 +1960,7 @@ configure:18242: checking for vfork.h
 configure:18251: result: no
 configure:18271: checking for fork
 configure:18327: gcc -o conftest -g -O2    conftest.c   >&5
-conftest.c:61: warning: conflicting types for built-in function 'fork'
+conftest.c:62: warning: conflicting types for built-in function 'fork'
 configure:18334: $? = 0
 configure:18356: result: yes
 configure:18271: checking for vfork
@@ -1413,7 +2030,7 @@ configure:19959: result: int,fd_set *,struct timeval *
 configure:19989: checking return type of signal handlers
 configure:20017: gcc -c -g -O2   conftest.c >&5
 conftest.c: In function 'main':
-conftest.c:60: error: void value not ignored as it ought to be
+conftest.c:61: error: void value not ignored as it ought to be
 configure:20024: $? = 1
 configure: failed program was:
 | /* confdefs.h.  */
@@ -1436,6 +2053,7 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_DLFCN_H 1
 | #define LT_OBJDIR ".libs/"
+| #define HAVE_CUDA 1
 | #define HAVE_PSRDADA 1
 | #define HAVE_THRUST 1
 | #define STDC_HEADERS 1
@@ -1494,18 +2112,18 @@ configure:20184: $? = 0
 configure:20201: result: no
 configure:20221: checking for strftime
 configure:20277: gcc -o conftest -g -O2    conftest.c   >&5
-conftest.c:79: warning: conflicting types for built-in function 'strftime'
+conftest.c:80: warning: conflicting types for built-in function 'strftime'
 configure:20284: $? = 0
 configure:20306: result: yes
 configure:20397: checking for vprintf
 configure:20453: gcc -o conftest -g -O2    conftest.c   >&5
-conftest.c:80: warning: conflicting types for built-in function 'vprintf'
+conftest.c:81: warning: conflicting types for built-in function 'vprintf'
 configure:20460: $? = 0
 configure:20482: result: yes
 configure:20491: checking for _doprnt
 configure:20547: gcc -o conftest -g -O2    conftest.c   >&5
-/tmp/cctm7n1O.o: In function `main':
-/share/apps/pulsar/heimdall-astro-code/conftest.c:92: undefined reference to `_doprnt'
+/tmp/ccxc58L9.o: In function `main':
+/home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/conftest.c:93: undefined reference to `_doprnt'
 collect2: ld returned 1 exit status
 configure:20554: $? = 1
 configure: failed program was:
@@ -1529,6 +2147,7 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_DLFCN_H 1
 | #define LT_OBJDIR ".libs/"
+| #define HAVE_CUDA 1
 | #define HAVE_PSRDADA 1
 | #define HAVE_THRUST 1
 | #define STDC_HEADERS 1
@@ -1615,14 +2234,14 @@ configure:20725: $? = 0
 configure:20747: result: yes
 configure:20662: checking for memset
 configure:20718: gcc -o conftest -g -O2    conftest.c   >&5
-conftest.c:82: warning: conflicting types for built-in function 'memset'
+conftest.c:83: warning: conflicting types for built-in function 'memset'
 configure:20725: $? = 0
 configure:20747: result: yes
 configure:20662: checking for pow
 configure:20718: gcc -o conftest -g -O2    conftest.c   >&5
-conftest.c:83: warning: conflicting types for built-in function 'pow'
-/tmp/ccnlEKz7.o: In function `main':
-/share/apps/pulsar/heimdall-astro-code/conftest.c:94: undefined reference to `pow'
+conftest.c:84: warning: conflicting types for built-in function 'pow'
+/tmp/ccBl0Vau.o: In function `main':
+/home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/conftest.c:95: undefined reference to `pow'
 collect2: ld returned 1 exit status
 configure:20725: $? = 1
 configure: failed program was:
@@ -1646,6 +2265,7 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_DLFCN_H 1
 | #define LT_OBJDIR ".libs/"
+| #define HAVE_CUDA 1
 | #define HAVE_PSRDADA 1
 | #define HAVE_THRUST 1
 | #define STDC_HEADERS 1
@@ -1730,9 +2350,9 @@ configure:20725: $? = 0
 configure:20747: result: yes
 configure:20662: checking for sqrt
 configure:20718: gcc -o conftest -g -O2    conftest.c   >&5
-conftest.c:84: warning: conflicting types for built-in function 'sqrt'
-/tmp/ccEOSaih.o: In function `main':
-/share/apps/pulsar/heimdall-astro-code/conftest.c:95: undefined reference to `sqrt'
+conftest.c:85: warning: conflicting types for built-in function 'sqrt'
+/tmp/cch4NRgE.o: In function `main':
+/home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/conftest.c:96: undefined reference to `sqrt'
 collect2: ld returned 1 exit status
 configure:20725: $? = 1
 configure: failed program was:
@@ -1756,6 +2376,7 @@ configure: failed program was:
 | #define HAVE_UNISTD_H 1
 | #define HAVE_DLFCN_H 1
 | #define LT_OBJDIR ".libs/"
+| #define HAVE_CUDA 1
 | #define HAVE_PSRDADA 1
 | #define HAVE_THRUST 1
 | #define STDC_HEADERS 1
@@ -1837,7 +2458,7 @@ configure: failed program was:
 configure:20747: result: no
 configure:20662: checking for strdup
 configure:20718: gcc -o conftest -g -O2    conftest.c   >&5
-conftest.c:84: warning: conflicting types for built-in function 'strdup'
+conftest.c:85: warning: conflicting types for built-in function 'strdup'
 configure:20725: $? = 0
 configure:20747: result: yes
 configure:20662: checking for strerror
@@ -1989,16 +2610,16 @@ lt_cv_sys_max_cmd_len=1966080
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run aclocal-1.11'
+ACLOCAL='${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run aclocal-1.11'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
-AMTAR='${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run tar'
+AMTAR='${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run tar'
 AR='ar'
 ARCH='AMD64'
-AUTOCONF='${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run autoconf'
-AUTOHEADER='${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run autoheader'
-AUTOMAKE='${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run automake-1.11'
+AUTOCONF='${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run autoconf'
+AUTOHEADER='${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run autoheader'
+AUTOMAKE='${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run automake-1.11'
 AWK='gawk'
 CC='gcc'
 CCDEPMODE='depmode=gcc3'
@@ -2006,7 +2627,7 @@ CFLAGS='-g -O2 '
 CPP='gcc -E'
 CPPFLAGS=''
 CUDA_CFLAGS='-I/usr/local/cuda/include'
-CUDA_LIBS=''
+CUDA_LIBS='-L/usr/local/cuda-7.5/targets/x86_64-linux/lib -lcudart'
 CUDA_NVCC='/usr/local/cuda/bin/nvcc -std=c++11 $(CUDA_NVCC_FLAGS) -Xcompiler "$(DEFAULT_INCLUDES) $(INCLUDES) -I/share/apps/pulsar/boost/boost_1_60_0/include $(AM_CPPFLAGS) $(CPPFLAGS)"'
 CXX='g++'
 CXXCPP='g++ -E'
@@ -2026,8 +2647,8 @@ EGREP='/bin/grep -E'
 EXEEXT=''
 FGREP='/bin/grep -F'
 GREP='/bin/grep'
-HAVE_CUDA_FALSE=''
-HAVE_CUDA_TRUE='#'
+HAVE_CUDA_FALSE='#'
+HAVE_CUDA_TRUE=''
 HAVE_DEDISP_FALSE=''
 HAVE_DEDISP_TRUE='#'
 HAVE_PSRDADA_FALSE='#'
@@ -2048,7 +2669,7 @@ LIPO=''
 LN_S='ln -s'
 LOGIN_ARCH=''
 LTLIBOBJS=''
-MAKEINFO='${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run makeinfo'
+MAKEINFO='${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run makeinfo'
 MKDIR_P='/bin/mkdir -p'
 NM='/usr/bin/nm -B'
 NMEDIT=''
@@ -2109,7 +2730,7 @@ host_vendor='unknown'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /share/apps/pulsar/heimdall-astro-code/install-sh'
+install_sh='${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'
@@ -2150,6 +2771,7 @@ target_alias=''
 #define HAVE_UNISTD_H 1
 #define HAVE_DLFCN_H 1
 #define LT_OBJDIR ".libs/"
+#define HAVE_CUDA 1
 #define HAVE_PSRDADA 1
 #define HAVE_THRUST 1
 #define STDC_HEADERS 1
@@ -2209,15 +2831,32 @@ generated by GNU Autoconf 2.63.  Invocation command line was
 
 on transient.ast.man.ac.uk
 
-config.status:1116: creating Applications/Makefile
-config.status:1116: creating Formats/Makefile
-config.status:1116: creating Makefile
-config.status:1116: creating Network/Makefile
-config.status:1116: creating Pipeline/Makefile
-config.status:1116: creating Share/Makefile
-config.status:1116: creating Scripts/Makefile
-config.status:1116: creating Scripts/trans_paths.py
-config.status:1116: creating config.h
-config.status:1338: config.h is unchanged
-config.status:1390: executing depfiles commands
-config.status:1390: executing libtool commands
+config.status:1117: creating Applications/Makefile
+config.status:1117: creating Formats/Makefile
+config.status:1117: creating Makefile
+config.status:1117: creating Network/Makefile
+config.status:1117: creating Pipeline/Makefile
+config.status:1117: creating Share/Makefile
+config.status:1117: creating Scripts/Makefile
+config.status:1117: creating Scripts/trans_paths.py
+config.status:1117: creating config.h
+config.status:1391: executing depfiles commands
+config.status:1391: executing libtool commands
+
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
+
+This file was extended by HEIMDALL config.status 0.1, which was
+generated by GNU Autoconf 2.63.  Invocation command line was
+
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status config.h
+
+on transient.ast.man.ac.uk
+
+config.status:1117: creating config.h
+config.status:1339: config.h is unchanged

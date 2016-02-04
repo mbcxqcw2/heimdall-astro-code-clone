@@ -237,7 +237,7 @@ hardcode_into_libs=yes
 sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/4.4.7 /usr/lib64 /lib64"
 
 # Run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /lib /lib64 /usr/lib /usr/lib64 /opt/rocks/lib /opt/ganglia/lib64 /usr/lib64/mysql /usr/lib64/nvidia /usr/lib64/papi-4.1.3 /usr/lib64/papi-5.1.1/usr/lib /opt/pdsh/lib/pdsh /usr/lib64/qt-3.3/lib /usr/lib64/xulrunner /lib64 /usr/lib64 /usr/kerberos/lib64 "
+sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /usr/lib64/atlas /lib /lib64 /usr/lib /usr/lib64 /opt/rocks/lib /opt/ganglia/lib64 /usr/lib64/mysql /usr/lib64/nvidia /usr/lib64/papi-4.1.3 /usr/lib64/papi-5.1.1/usr/lib /opt/pdsh/lib/pdsh /usr/lib64/qt-3.3/lib /usr/lib64/xulrunner /lib64 /usr/lib64 /usr/kerberos/lib64 "
 
 # Whether dlopen is supported.
 dlopen_support=unknown

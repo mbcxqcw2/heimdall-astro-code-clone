@@ -8,7 +8,7 @@
 #define HAVE_ARPA_INET_H 1
 
 /* Define if the CUDA library is present */
-/* #undef HAVE_CUDA */
+#define HAVE_CUDA 1
 
 /* Define if the DEDISP Library is present */
 /* #undef HAVE_DEDISP */

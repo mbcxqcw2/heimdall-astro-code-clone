@@ -846,10 +846,10 @@ hd_error hd_execute(hd_pipeline pl,
                   << h_group_filter_inds[i] << "\t"
                   << h_group_dm_inds[i] << "\t"
                   << h_group_dms[i] << "\t"
-                  << h_group_flags[i] << "\t" //uncommented by charlie
+                  //<< h_group_flags[i] << "\t" //uncommented by charlie
                   << h_group_members[i] << "\t"
                   // HACK %13
-                  << (beam+pl->params.beam)%13+1 << "\t" //uncommented by charlie
+                  //<< (beam+pl->params.beam)%13+1 << "\t" //uncommented by charlie
                   << first_idx + h_group_begins[i] << "\t"
                   << first_idx + h_group_ends[i] << "\t"
                   << "\n";

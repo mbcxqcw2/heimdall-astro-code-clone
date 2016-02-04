@@ -143,13 +143,13 @@ HEADERS = $(include_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run aclocal-1.11
-AMTAR = ${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run tar
+ACLOCAL = ${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run aclocal-1.11
+AMTAR = ${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run tar
 AR = ar
 ARCH = AMD64
-AUTOCONF = ${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run autoconf
-AUTOHEADER = ${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run autoheader
-AUTOMAKE = ${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run automake-1.11
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -157,7 +157,7 @@ CFLAGS = -g -O2
 CPP = gcc -E
 CPPFLAGS = 
 CUDA_CFLAGS = -I/usr/local/cuda/include
-CUDA_LIBS = 
+CUDA_LIBS = -L/usr/local/cuda-7.5/targets/x86_64-linux/lib -lcudart
 CUDA_NVCC = /usr/local/cuda/bin/nvcc -std=c++11 $(CUDA_NVCC_FLAGS) -Xcompiler "$(DEFAULT_INCLUDES) $(INCLUDES) -I/share/apps/pulsar/boost/boost_1_60_0/include $(AM_CPPFLAGS) $(CPPFLAGS)"
 CXX = g++
 CXXCPP = g++ -E
@@ -192,7 +192,7 @@ LIPO =
 LN_S = ln -s
 LOGIN_ARCH = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /share/apps/pulsar/heimdall-astro-code/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/missing --run makeinfo
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
 NMEDIT = 
@@ -218,10 +218,10 @@ STRIP = strip
 THRUST_CFLAGS = -I/share/apps/pulsar/thrust-1.8.1/thrust/include
 THRUST_LIBS = 
 VERSION = 0.1
-abs_builddir = /share/apps/pulsar/heimdall-astro-code/Applications
-abs_srcdir = /share/apps/pulsar/heimdall-astro-code/Applications
-abs_top_builddir = /share/apps/pulsar/heimdall-astro-code
-abs_top_srcdir = /share/apps/pulsar/heimdall-astro-code
+abs_builddir = /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/Applications
+abs_srcdir = /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/Applications
+abs_top_builddir = /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone
+abs_top_srcdir = /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 ac_ct_DUMPBIN = 
@@ -251,7 +251,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /share/apps/pulsar/heimdall-astro-code/install-sh
+install_sh = ${SHELL} /home/cwalker/charlie_scratch/git-repositories/heimdall-astro-code-clone/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -283,7 +283,7 @@ coincidencer_client_SOURCES = coincidencer_client.C
 LDADD = $(top_builddir)/Formats/libhdformats.la \
   $(top_builddir)/Pipeline/libhdpipeline.la \
   $(top_builddir)/Network/libhdnetwork.la \
-    -L/share/apps/pulsar/psrdada/lib -lpsrdada
+  -L/usr/local/cuda-7.5/targets/x86_64-linux/lib -lcudart  -L/share/apps/pulsar/psrdada/lib -lpsrdada
 
 heimdall_CFLAGS = $(CUDA_CFLAGS)
 DIFFDATA = $(nobase_dist_data_DATA) $(dist_data_DATA) $(data_DATA)

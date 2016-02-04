@@ -1,0 +1,42 @@
+When running
+
+make
+
+on the Heimdall astro code on transient you will get some errors. These are due to the code running C compilers on C++ code, and being unable to find certain libraries.
+
+Firstly, the code will be unable to find the dedisp libraries when inside the Applications subfolder when running:
+
+/bin/sh ../libtool --tag=CXX   --mode=link g++  -g -O2  -I/usr/local/cuda/include   -o heimdall heimdall.o ../Formats/libhdformats.la ../Pipeline/libhdpipeline.la ../Network/libhdnetwork.la -L/usr/local/cuda-7.5/targets/x86_64-linux/lib -lcudart  -L/share/apps/pulsar/psrdada/lib -lpsrdada
+
+Fix it by running:
+
+/bin/sh ../libtool --tag=CXX   --mode=link g++  -g -O2  -I/usr/local/cuda/include   -o heimdall heimdall.o ../Formats/libhdformats.la ../Pipeline/libhdpipeline.la ../Network/libhdnetwork.la -L/usr/local/cuda-7.5/targets/x86_64-linux/lib -lcudart  -L/share/apps/pulsar/psrdada/lib -lpsrdada -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp
+
+from within the applications subfolder (the change to the code which is displayed in the error is the addition of the library:
+
+ -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp
+
+ to the end.)
+
+run make from main folder again and the second error you will find is again located in Applications, after it tries running:
+
+/bin/sh ../libtool --tag=CC   --mode=link gcc  -g -O2    -o candidate_profiler candidate_profiler.o ../Formats/libhdformats.la ../Pipeline/libhdpipeline.la ../Network/libhdnetwork.la -L/usr/local/cuda-7.5/targets/x86_64-linux/lib -lcudart  -L/share/apps/pulsar/psrdada/lib -lpsrdada
+
+You correct this by running:
+
+/bin/sh ../libtool --tag=CXX   --mode=link g++  -g -O2    -o candidate_profiler candidate_profiler.o ../Formats/libhdformats.la ../Pipeline/libhdpipeline.la ../Network/libhdnetwork.la -L/usr/local/cuda-7.5/targets/x86_64-linux/lib -lcudart  -L/share/apps/pulsar/psrdada/lib -lpsrdada -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp
+
+Here we have both changed the compiler from gcc to g++, and added the above libraries again.
+
+run make again and you'll get a third error (agai n in applications)
+
+/bin/sh ../libtool --tag=CC   --mode=link gcc  -g -O2    -o fil2pgm fil2pgm.o ../Formats/libhdformats.la ../Pipeline/libhdpipeline.la ../Network/libhdnetwork.la -L/usr/local/cuda-7.5/targets/x86_64-linux/lib -lcudart  -L/share/apps/pulsar/psrdada/lib -lpsrdada
+
+fix by doing the same...
+
+/bin/sh ../libtool --tag=CXX   --mode=link g++  -g -O2    -o fil2pgm fil2pgm.o ../Formats/libhdformats.la ../Pipeline/libhdpipeline.la ../Network/libhdnetwork.la -L/usr/local/cuda-7.5/targets/x86_64-linux/lib -lcudart  -L/share/apps/pulsar/psrdada/lib -lpsrdada -L/share/apps/pulsar/dedisp-read-only/lib -ldedisp
+
+
+After this, make should work.
+
+
