@@ -1,3 +1,6 @@
+####HOW TO MAKE "MAKE" WORK ON TRANSIENT (MAY BE ADAPTED FOR OTHER THINGS####
+####Note: running MAKE_FIX.sh will automatically perform these fixes####
+
 When running
 
 make

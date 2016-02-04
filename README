@@ -1,5 +1,7 @@
 Readme file
 
+if make issues occur: check make_fixes.txt and run MAKE_FIX.sh
+
 HOW HEIMDALL WORKS
 
 run: heimdall -f [file].fil to generate a candidate (.cand) file
