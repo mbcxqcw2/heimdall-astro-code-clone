@@ -1,1 +1,19 @@
 Readme file
+
+HOW HEIMDALL WORKS
+
+run: heimdall -f [file].fil to generate a candidate (.cand) file
+
+including -v, -V, -g or -G incrementally increases verbosity (tells you what is going on)
+
+at maximum verbosity you can see that heimdall:
+
+1: allocates memory for pipeline computations
+2: does 0-dm cleaning
+3: dedisperses within your chosen range (default 0-1000.56)
+4: copies??
+5: Baselines??
+6: Normalises??
+7: Filters?? (guessing match filtering?)
+8: Finds giant pulses
+9: Processes candidates (writes them to file?)
