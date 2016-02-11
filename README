@@ -19,3 +19,36 @@ at maximum verbosity you can see that heimdall:
 7: Filters?? (guessing match filtering?)
 8: Finds giant pulses
 9: Processes candidates (writes them to file?)
+
+Between lines 843 and 860, Pipeline/pipeline.cu writes out to a .cand file with 14 columns:
+
+h_group_peaks            = the s/r of the detected pulse
+samp_idx                 = the sample which the pulse was detected in (the file is split into samples)
+samp_idx*pl->params.dt   = the sample id number * the sampling time (i.e. the time of the pulse)
+h_group_filter_inds      = the filter index (is this something to do with the boxcar?)
+h_group_dm_inds          = the DM index
+h_group_dms              = the DM of the peak
+h_group_members          = the number of other peaks considered to be the same peak (due to dedispersing at slightly different values etc.)
+first_idx+h_group_begins = when the group begins
+first_idx+h_group_ends   = when the group ends
+nbeams                   = number of beams in the telescope. Currently set to 1. Added by Charlie.
+beam mask                = a beam mask. Currently set to 1. Added by Charlie.
+prim beam                = the primary beam. Currently set to 1. Added by Charlie.
+max snr                  = the maximum S/R limit. Currently set to 1. Added by Charlie.
+beam                     = the beam number. Currently set to 1. Added by Charlie.
+
+These columns are read by scripts/trans_gen_overview.py and processed into single pulse plots:
+
+Upper Left:
+
+Dispersion measure (x) binned against number of candidates (y). Colour refers to the telescope beam number, hence it is always 1.
+
+Upper Right:
+
+Dispersion measure (x) plotted against s/r (y). Colour refers to the boxcar width used to smooth the data to detect the pulses. Crosses are pre-flagged RFI.
+
+Lower:
+
+Time of pulse (x) vs dispersion measure (y). Number refers to telescope beam, hence it is always 1. Circle radius represents SNR. Colour is boxcar width, as above. Crosses are flagged RFI, as above.
+
+Note, DM is always labeled DM+1 as it is on a log scale.
