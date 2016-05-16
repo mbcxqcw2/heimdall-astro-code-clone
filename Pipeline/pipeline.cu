@@ -45,6 +45,23 @@ using thrust::device_vector;
 
 #include <dedisp.h>
 
+
+//charlie test of writing new candidate file
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+//charlie read 8 bit array into byte:
+unsigned char ToByte(bool b[8])
+{
+    unsigned char c = 0;
+    for (int i=0; i < 8; ++i)
+        if (b[7-i])
+            c |= 1 << i;
+    return c;
+}
+
+
 #define HD_BENCHMARK
 
 #ifdef HD_BENCHMARK
@@ -838,27 +855,173 @@ hd_error hd_execute(hd_pipeline pl,
 
     if (cand_file.good())
     {
+
+ 
+      //create empty array for cands
+      float dt=pl->params.dt;
+      int arrsize=int(60/dt)*int(dm_count);
+      cout << "Number of time samples " << int(60/dt) << endl;
+      cout << "Number of DMs " << int(dm_count) << endl;
+      cout << "Array size " << arrsize << endl;
+
+      //get size which is divisible by 8
+      int PadArrSize = arrsize + (8-(arrsize%8));
+      cout << "Padded array size " << PadArrSize << endl;
+
+      //get size for padded array for wrap prevention purposes
+      int nt = 1;//pad by one extra time column on either side
+      int nDM = 1;//pad by one extra DM row on top and bottom
+      //int NoWrapArrSize = arrsize + (2*((2*nt)+int(60/dt))) + (2*((2*nDM)+dm_count)) - 4;
+      int NoWrapArrSize = arrsize + (2*nDM*dm_count) + (2*nt*int(60/dt)) + 4;
+      int NoWrapPadSize = NoWrapArrSize + (8-(NoWrapArrSize%8));
+
+      //create arrays
+      bool *Cands = new bool[PadArrSize];
+      char *CandSmall = new char[PadArrSize/8];
+      //bool *CandOverlap = new bool[PadArrSize];//may remove later
+      //char *CandOSmall = new char[PadArrSize/8];//may remove later
+      bool *NoWrap = new bool[NoWrapPadSize];
+      char *NoWrapSmall = new char[NoWrapPadSize/8];
+      int Index = 0;
+      int NoWrapIndex = 0;
+
+
       for( hd_size i=0; i<h_group_peaks.size(); ++i ) {
         hd_size samp_idx = first_idx + h_group_inds[i];
         cand_file << h_group_peaks[i] << "\t"
-                  << samp_idx << "\t"
+                  //<< samp_idx << "\t" //time sample index (fb file split into multiple smaller time samples)
                   << samp_idx * pl->params.dt << "\t"
-                  << h_group_filter_inds[i] << "\t"
-                  << h_group_dm_inds[i] << "\t"
+                  //<< h_group_filter_inds[i] << "\t"
+                  //<< h_group_dm_inds[i] << "\t" //dm index (from pre-generated list of dms)
                   << h_group_dms[i] << "\t"
                   //<< h_group_flags[i] << "\t" //recommented by charlie
-                  << h_group_members[i] << "\t"
+                  //<< h_group_members[i] << "\t"
                   // HACK %13
                   //<< (beam+pl->params.beam)%13+1 << "\t" //recommented by charlie
-                  << first_idx + h_group_begins[i] << "\t"
-                  << first_idx + h_group_ends[i] << "\t"
-                  << 1 << "\t" //nbeams test by charlie
-                  << 1 << "\t" //beam mask test by charlie
-                  << 1 << "\t" //prim beam test by charlie
-                  << 1 << "\t" //max snr test by charlie
-                  << 1 << "\t" //beam test by charlie
+                  //<< first_idx + h_group_begins[i] << "\t"
+                  //<< first_idx + h_group_ends[i] << "\t"
+                  //<< 1 << "\t" //nbeams test by charlie
+                  //<< 1 << "\t" //beam mask test by charlie
+                  //<< 1 << "\t" //prim beam test by charlie
+                  //<< 1 << "\t" //max snr test by charlie
+                  //<< 1 << "\t" //beam test by charlie
+
                   << "\n";
+
+          //for each viable candidate create the list (1d) index
+          //Index = (h_group_dm_inds[i]*int(60/(pl->params.dt)))+samp_idx;
+          Index = (samp_idx * dm_count) + h_group_dm_inds[i];
+          NoWrapIndex = ((samp_idx + 1)*(dm_count+(2*nDM))) + (h_group_dm_inds[i]+1);
+
+          //mark candidate in array
+          Cands[Index]=1;
+          NoWrap[NoWrapIndex]=1;
+
+          //mark candidate+surrounding DM+times in overlap array (if it fails on 1 does it on all?)
+          //CandOverlap[Index]=1;
+          //try {//the try stops up/down wrap errors
+          //   if((Index%dm_count)!=(Index-1)){//stops right shift wrapping
+          //     CandOverlap[Index+dm_count]=1;
+          //     CandOverlap[Index+dm_count+1]=1;
+          //     CandOverlap[Index+dm_count-1]=1;
+          //   }
+          //   if((Index%dm_count)!=(0)){//stops left shift wrapping DOESN'T WORK
+          //     CandOverlap[Index-dm_count]=1;
+          //     CandOverlap[Index-dm_count+1]=1;
+          //     CandOverlap[Index-dm_count-1]=1;
+          //   }
+          //   CandOverlap[Index+1]=1;
+          //   CandOverlap[Index-1]=1;
+          //}
+          //catch (...) {
+          //     cout << "Could not amend array in this position." << endl;
+          //}
+
+          //mark surrounding area of candidate in no wrap array
+          NoWrap[NoWrapIndex+1]=1;
+          NoWrap[NoWrapIndex-1]=1;
+          NoWrap[NoWrapIndex+(dm_count+(2*nDM))]=1;
+          NoWrap[NoWrapIndex+(dm_count+(2*nDM))+1]=1;
+          NoWrap[NoWrapIndex+(dm_count+(2*nDM))-1]=1;
+          NoWrap[NoWrapIndex-(dm_count+(2*nDM))]=1;
+          NoWrap[NoWrapIndex-(dm_count+(2*nDM))+1]=1;
+          NoWrap[NoWrapIndex-(dm_count+(2*nDM))-1]=1;
+          //mark extra if nt is 2
+          //NoWrap[NoWrapIndex+(dm_count+(2*nDM))+2]=1;
+          //NoWrap[NoWrapIndex+(dm_count+(2*nDM))-2]=1;
+          //NoWrap[NoWrapIndex+2]=1;
+          //NoWrap[NoWrapIndex-2]=1;
+          //NoWrap[NoWrapIndex-(dm_count+(2*nDM))+2]=1;
+          //NoWrap[NoWrapIndex-(dm_count+(2*nDM))-2]=1;
       }
+      
+      //loop over all of the candidates and fill the buffer, when full transfer the 8 bits to a character and store in smaller array
+      cout << "Generating the char array out of the bool array." << endl;
+      bool buffer[8];//create buffer array for 8 bits of the data
+      for( int i=0; i<PadArrSize; ++i ){//loop over candidates
+        buffer[i%8]=Cands[i];//fill buffer
+        if((i%8)==7){//if buffer is full:
+          CandSmall[i/8]=ToByte(buffer);//store 8 bits as character in small array
+        }
+      }
+
+      //do above, but for the overlap array
+      //cout << "Generating the char overlap array out of the bool array." << endl;
+      //bool bufferO[8];//create buffer array for 8 bits of the data
+      //for( int i=0; i<PadArrSize; ++i ){//loop over candidates
+      //  bufferO[i%8]=CandOverlap[i];//fill buffer
+      //  if((i%8)==7){//if buffer is full:
+      //    CandOSmall[i/8]=ToByte(bufferO);//store 8 bits as character in small array
+      //  }
+      //}
+
+      //do above, but for the no-wrap array
+      cout << "Generating the char overlap array out of the no-wrap array." << endl;
+      bool bufferNW[8];//create buffer array for 8 bits of the data
+      for( int i=0; i<NoWrapPadSize; ++i ){//loop over candidates
+        bufferNW[i%8]=NoWrap[i];//fill buffer
+        if((i%8)==7){//if buffer is full:
+          NoWrapSmall[i/8]=ToByte(bufferNW);//store 8 bits as character in small array
+        }
+      }
+
+      //write packed array to a binary file
+      cout << "Writing the packed array to a binary file." << endl;
+      std::ofstream packedfile("packed.bin",std::ios::binary);
+      packedfile.write((char*) CandSmall, sizeof(char)*PadArrSize/8);
+
+      //write packed overlap array to a binary file
+      //cout << "Writing the packed overlap array to a binary file." << endl;
+      //std::ofstream packedOfile("packed_overlap.bin",std::ios::binary);
+      //packedOfile.write((char*) CandOSmall, sizeof(char)*PadArrSize/8);
+
+      //write no-wrap array to a binary file
+      cout << "Writing the packed no-wrap array to a binary file." << endl;
+      std::ofstream packedNWfile("packed_nowrap.bin",std::ios::binary);
+      packedNWfile.write((char*) NoWrapSmall, sizeof(char)*NoWrapPadSize/8);
+      
+      //write the binary array to a standard text file
+      //cout << "Writing the binary array to a standard text file." << endl;
+      //ofstream myfile;
+      //myfile.open ("packed.txt");
+      //for(int count = 0; count < PadArrSize; count ++){
+      //  myfile << Cands[count] << " " ;    
+      //}
+      //myfile.close();
+
+      // Deleting arrays from memory
+      delete [] Cands;
+      delete [] CandSmall;
+      //delete [] CandOverlap;
+      //delete [] CandOSmall;
+      delete [] NoWrap;
+      delete [] NoWrapSmall;
+
+      // Write out dm key for use with unpacking
+      cout << "Writing DM IDs to a file." << endl;
+      std::ofstream ofile2("key.dm", std::ios::binary);
+      ofile2.write((char*) dm_list, sizeof(float)*dm_count);
+
     }
     else
       cout << "Skipping dump due to bad file open on " << filename << endl;

@@ -3,7 +3,7 @@
 import sys
 import numpy as np
 
-MAX_DM = 2000
+MAX_DM = 5000
 
 class Classifier(object):
     def __init__(self):
@@ -338,6 +338,7 @@ if __name__ == "__main__":
     
     parser = argparse.ArgumentParser(description="Generates data for Heimdall overview plots.")
     parser.add_argument('-cands_file', default="all_candidates.dat")
+    #parser.add_argument('-out_name',default="out.png")#added by charlie to vary output name
     parser.add_argument('-nbeams', type=int, default=13)
     parser.add_argument('-snr_cut', type=float)
     parser.add_argument('-beam_mask', type=int, default=(1<<13)-1)
@@ -359,6 +360,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     filename = args.cands_file
+    #outname = args.out_name #added by charlie to vary output name
     nbeams = args.nbeams
     interactive = args.interactive
     std_out = args.std_out
@@ -457,11 +459,11 @@ if __name__ == "__main__":
           if verbose:
             sys.stderr.write ( "Writing binary image data to STDOUT\n")
         else:
-          g('set output "overview_' + resolution + '.tmp.png"')
+          g('set output "overview_' + resolution + '.tmp.png"')#g('set output "overview_'+filename+'.png"')  #change by charlie to vary out name
           if verbose:
             sys.stderr.write ( "Writing plots to overview_" + resolution + ".tmp.png\n")
-      else:
-        g('set terminal x11 size '+ res_x + ', ' + res_y)
+      #else:
+      #  g('set terminal x11 size '+ res_x + ', ' + res_y)
 
       if just_time_dm:
         timedm_plot = TimeDMPlot(g, False)

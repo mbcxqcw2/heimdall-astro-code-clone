@@ -22,7 +22,7 @@ void hd_set_default_params(hd_params* params) {
 	params->beam            = 0;
 	params->override_beam   = false;
 	params->nchans          = 1024;
-	params->dt              = 64e-6;
+	params->dt              = 64e-6;//charlie changed 64 to 256
 	params->f0              = 1581.804688;
 	params->df              = -.390625;
 	params->dm_min          = 0.0;
@@ -32,10 +32,10 @@ void hd_set_default_params(hd_params* params) {
 	params->dm_nbits        = 32;//8;
 	params->use_scrunching  = true;
 	params->scrunch_tol     = 1.15;
-	params->rfi_tol         = 5.0;//1e-6;//1e-9; TODO: Should this be a probability instead?
+	params->rfi_tol         = 4.5;//1e-6;//1e-9; TODO: Should this be a probability instead?
 	params->rfi_min_beams   = 8;
 	params->boxcar_max      = 4096;//2048;//512;
-	params->detect_thresh   = 6.0;
+	params->detect_thresh   = 5.0;//default was 6.0 before charlie changed it
 	params->cand_sep_time   = 3;
 	// Note: These have very little effect on the candidates, but could be important
 	//         to capture (*rare*) coincident events.
